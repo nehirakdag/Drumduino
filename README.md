@@ -1,6 +1,6 @@
 # Drumduino
 
-Drumdino is a drum kit implementation using an Arduino shield interfaced with Max/MSP for MIDI sound generation.
+Drumdino is a drum kit implementation using an Arduino shield interfaced with Max/MSP for MIDI sound generation and processing.
 
 ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Kit.jpg)
 
