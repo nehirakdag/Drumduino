@@ -22,4 +22,9 @@ The first thing I had in my mind was to create a drum sequencer (of the size of 
   - Building a drum kit was a reasonable implementation choice given that I decided to use force sensing resistors as part of this project to create interesting applications with the Arduino
   - The code I would have that senses "knocks" via the Arduino and sends proper messages to Max/MSP for sound generation and processing would be applicable to more than just an electronic drum kit project. So once I finished my drum kit and properly integrated its software, I could easily use the same software (with minor adjustments) to implement my initial project idea of building a small drum sequencer attachable to an electric guitar using arcade buttons as kit elements.
 
+| Piezo Element  | Arcade Button |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 ##Challenges
