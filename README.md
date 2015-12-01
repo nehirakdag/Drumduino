@@ -10,7 +10,7 @@ There were both hardware and software parts to this project, with more emphasis 
 
 
 
-#Background & Design Choices
+##Background & Design Choices
 MUMT306 taught me many interesting applications and methods of audio computing throughout this term. A particular one of these tools, the Arduino, was something that I had previous experience dealing with as part of my engineering courses. However, I did not have any knowledge on how to use it in relation to digital audio generation and processing. We had learned how to get the Arduino talking to Max/MSP in class, and my general familiarity with synthesis using Max made me eager to explore more about these ideas. I basically wanted to achieve some possible interesting application of this model of generating sound via Arduino's sensor pins, convert them to MIDI notes in Max, possibly add digital effects or other creative twists along the way.
 
 
@@ -22,4 +22,4 @@ The first thing I had in my mind was to create a drum sequencer (of the size of 
   - Building a drum kit was a reasonable implementation choice given that I decided to use force sensing resistors as part of this project to create interesting applications with the Arduino
   - The code I would have that senses "knocks" via the Arduino and sends proper messages to Max/MSP for sound generation and processing would be applicable to more than just an electronic drum kit project. So once I finished my drum kit and properly integrated its software, I could easily use the same software (with minor adjustments) to implement my initial project idea of building a small drum sequencer attachable to an electric guitar using arcade buttons as kit elements.
 
-#Challanges
+##Challenges
