@@ -32,7 +32,7 @@ Force-sensing seemed to be a reasonable starting point to focus on. However, bei
 | ------------- | ------------- |
 | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/piezo_element.jpg)  | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/arcade_button.jpg)  |
 
-##Design & Implementation
+#Design & Implementation
 The core foundation of the Drumduino is the Piezo Element, which is basically a circuit element that can be integrated with Arduino, and allows one to build a force sensitive surface. It consists of two oppositely polarized ends soldered to two surfaces, which are connected together. They allow the detection of changes of pressure and converts these changes to electrical charges which can be processed. Continuously reading an analog pin connected to a piezo element results in voltage readings which are proportional to the force applied on the surface containing the element. Note that the piezo element must also be parallel connected to a 1M Ohm resistor. Here is the diagram of such a circuit on an Arduino board.
 
 ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/knock_piezo.jpg)
@@ -41,6 +41,7 @@ Reading analog pin 0 for this circuit in the main loop function will continually
 
 One must first decide on the approximate size of the surface of each pad will be, so that material can be bought accordingly. Although there are many ways to create the drum pads, it makes sense to build each pad in three layers. The top layer will receive the drumstrokes so must constitute of a mousepad-like surface for authenticity. The middle layer is a metal that the piezo element will attach to. We want to protect this surface from direct contact of any impact applied, and hence are wrapping it around in two other layers. The bottom layer is simply there for stability, shock absorbtion and preventing any damage on the important middle layer; and thus can be any foamlike material, or mousepad again. The goal of creating an authentic pad could only be accomplished by using such material. 
 
+##Procedure
 Materials needed:
 - x6 Piezo elements
 - A somewhat thin metal sheet-like material (will be cut to form all pads - so large surface area)
@@ -70,11 +71,21 @@ We will want to make six of these. This is where hot glue comes to play, used to
 
 ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/soldering.jpg)
 
-Our job is not quite done with the wiring. The soldered extension of the piezo element will not be very strong. Since the Piezo's wires are pretty thin, and we will be dealing with an impact based system, we should aim to strengthen this connection somehow. If not cautious, the joint can easily detach and would have to be soldered again. Use heat shrinking tubes (or electrical tape can also work) to make sure this does not happen. Put them on the joint and heat the tube via a lighter or a blowdryer to make them shrink until sturdy, but make sure not to damage the wiring. Repeat this for the other five pads. We should have something like so:
+Our job is not quite done with the wiring. The soldered extension of the piezo element will not be very strong. Since the Piezo's wires are pretty thin, and we will be dealing with an impact based system, we should aim to strengthen this connection somehow. If not cautious, the joint can easily detach and would have to be soldered again. Using heat shrinking tubes (or electrical tape can also work) makes sure this does not happen. Putting them on the joint and heating the tube via a lighter or a blowdryer will make them shrink until sturdy, but make sure not to damage the wiring. Repeat this for the other five pads. We should have something like so:
 
 ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/heat_shrunken.jpg)
 
+Almost there! Now glue each of the three layers in the order discussed, on top of the base material like so (note that the middle two were not glued yet in the example below):
 
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/draft2.jpg)
+
+All that is left is to complete the circuit. With the circuitry for piezo elements in mind, create six circuits of each piezo element in parallel connection with a 1 MegaOhm resistor, with the positive input going in to analog pins of the Arduino:
+
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/piezo_initial.jpg)
+
+Parallel connect each + and - end of the piezo element to the appropriate ends of each circuit. The hardware is finally done! Now we can implement some software to process these pads.
+
+##Software
 
 ##Example Usage
 (Please view the raw videos provided, GitHub truncates the actual files)
