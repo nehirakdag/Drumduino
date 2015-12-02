@@ -66,7 +66,13 @@ The middle layer will later be inserted on top of the bottom layer as such. Howe
 | ------------- | ------------- | ------------- |
 | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/piezo_initial.jpg)  | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/Aluminum_disc.jpg) | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/Piezo_on_disc.jpg) | 
 
-We will want to make six of these. This is where hot glue comes to play, used to stick the piezo element to the metal disc we have. Make sure to get it as flat as possible for best results. Orient piezo on the disc such that the ends of its wires are not on the disc (unlike the picture shown on the left above). Next, notice that the piezo
+We will want to make six of these. This is where hot glue comes to play, used to stick the piezo element to the metal disc we have. Make sure to get it as flat as possible for best results. Orient piezo on the disc such that the ends of its wires will not be aligned on the disc when flattened (unlike the picture shown on the left above). Notice that it is impossible to make a circuit of six of these elements without increasing the length of each wires. To do so, we need to solder this end to another wire and extend it to the circuit we will build (preferably on the Arduino). At this point, you should decide how each pad will be situated from the Arduino board, and cut the other end wire according to this plan in mind. If too short, you would need to solder again. If too long, cutting the other end will be recommended to reduce its length. Here is an image example of soldering two wires together:
+
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/soldering.jpg)
+
+Our job is not quite done with the wiring. The soldered extension of the piezo element will not be very strong. Since the Piezo's wires are pretty thin, and we will be dealing with an impact based system, we should aim to strengthen this connection somehow. If not cautious, the joint can easily detach and would have to be soldered again. Use heat shrinking tubes (or electrical tape can also work) to make sure this does not happen. Put them on the joint and heat the tube via a lighter or a blowdryer to make them shrink until sturdy, but make sure not to damage the wiring. Repeat this for the other five pads. We should have something like so:
+
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/heat_shrunken.jpg)
 
 
 
