@@ -2,7 +2,7 @@
 
 Drumdino is a drum kit implementation using an Arduino shield interfaced with Max/MSP for MIDI sound generation and processing.
 
-![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Kit.jpg)
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/Kit.jpg)
 
 ##Overview
 In essence, an Arduino sketch is used to receive and process any impact received on the six pads. This data is sent to Max/MSP and converted to MIDI notes that can be outputted via the AU DLS Synth or be further processed for many interesting applications! 
@@ -24,7 +24,6 @@ The first thing I had in my mind was to create a drum sequencer (of the size of 
 
 | Piezo Element  | Arcade Button |
 | ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/piezo_element.jpg)  | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/arcade_button.jpg)  |
 
 ##Challenges
