@@ -37,7 +37,9 @@ To implement
 
 
 ##Example Usage
-![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/First_Upload_Not_Tuned_Yet.m4v)
+[First Upload Testing] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/First_Upload_Not_Tuned_Yet.m4v) (sorry for size)
+[A Simple Beat] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/Simple_Beat.mp4)
+[A Short Jam] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/Short_Jam.m4v)
 
 ##Challenging Issues
 - Putting together the hardware was much more difficult than how I envisioned it. I had previously worked with integrating circuits with Arduino to build a variety of different electronics in my engineering classes. However, back then I was more inclined to work on the software portions of group assignments during the division of tasks with my groupmates. I let others worry about the hardware while I worked on software, which was more engaging from my perspective. This project taught me, for one thing, that one can not simply neglect the importance of hardware and the existance of its issues when bringing together a project like this from scratch. Software is not everything (even though I want it to be).
