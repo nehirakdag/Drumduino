@@ -13,6 +13,10 @@ There were both hardware and software parts to this project, with more emphasis 
 ##Background & Design Choices
 MUMT306 taught me many interesting applications and methods of audio computing throughout this term. A particular one of these tools, the Arduino, was something that I had previous experience dealing with as part of my engineering courses. However, I did not have any knowledge on how to use it in relation to digital audio generation and processing. We had learned how to get the Arduino talking to Max/MSP in class, and my general familiarity with synthesis using Max made me eager to explore more about these ideas. I basically wanted to achieve some possible interesting application of this model of generating sound via Arduino's sensor pins, convert them to MIDI notes in Max, possibly add digital effects or other creative twists along the way.
 
+|  |  |
+| ------------- | ------------- |
+| ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/example1.jpg)  | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/example2.jpg)  |
+| [Source:] (https://www.youtube.com/watch?v=xkrGyFWPb5o) | [Source:] (https://www.youtube.com/watch?v=PnbuOmGOJxA) |
 
 
 
