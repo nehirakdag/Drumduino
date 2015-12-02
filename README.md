@@ -33,10 +33,35 @@ Force-sensing seemed to be a reasonable starting point to focus on. However, bei
 | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/piezo_element.jpg)  | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/arcade_button.jpg)  |
 
 ##Design & Implementation
-To implement 
+The core foundation of the Drumduino is the Piezo Element, which is basically a circuit element that can be integrated with Arduino, and allows one to build a force sensitive surface. It consists of two oppositely polarized ends soldered to two surfaces, which are connected together. They allow the detection of changes of pressure and converts these changes to electrical charges which can be processed. Continuously reading an analog pin connected to a piezo element results in voltage readings which are proportional to the force applied on the surface containing the element. Note that the piezo element must also be parallel connected to a 1M Ohm resistor. Here is the diagram of such a circuit on an Arduino board.
+
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/knock_piezo.jpg)
+
+Reading analog pin 0 for this circuit in the main loop function will continually yield voltage values. When there is no pressure applied on the piezo element, the voltage reading will result in readings of 0 (assuming there is no noise). Any force applied will yield non-zero readings, depending on the pressure on the piezo. The great thing about these elements is that they are not necessarily used on their own. Attaching them to a metal surface allows one to expand the surface area that is sensitive to impact. This will be the theoretical approach behind the Drumduino's implementation in terms of hardware.
+
+One must first decide on the approximate size of the surface of each pad will be, so that material can be bought accordingly. Although there are many ways to create the drum pads, it makes sense to build each pad in three layers. The top layer will receive the drumstrokes so must constitute of a mousepad-like surface for authenticity. The middle layer is a metal that the piezo element will attach to. We want to protect this surface from direct contact of any impact applied, and hence are wrapping it around in two other layers. The bottom layer is simply there for stability, shock absorbtion and preventing any damage on the important middle layer; and thus can be any foamlike material, or mousepad again.
+
+Materials needed:
+- x6 Piezo elements
+- A somewhat thin metal sheet-like material (will be cut to form all pads - so large surface area)
+- Mousepad-like thicker material (will also be cut - x2 surface area of that of previous)
+- Electrical wires to extend the piezo elements' ends, complete the circuit
+- Soldering Iron and solder (and thus, soldering knowledge)
+- Hot glue or electrical tape to connect piezos to metal surfaces
+- Heat shrink tubes or electrical tape to protect the soldered joints of piezo elements and wires
+- x6 1MegaOhm resistors
+- Craft glue or adhesive spray to connect each layer together
+- Plywood (or basically any large, flat surface that the six pads and Arduino can reside on once everything is finished)
+
+
+
+The goal of creating an authentic pad could only be accomplished by using such material. 
 
 
 ##Example Usage
+(Please view the raw videos provided, GitHub truncates the actual files)
+
+
 - [First Upload Testing] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/First_Upload_Not_Tuned_Yet.m4v) (sorry for size)
 - [A Simple Beat] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/Simple_Beat.mp4)
 - [A Short Jam] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/Short_Jam.m4v)
