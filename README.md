@@ -5,7 +5,7 @@ Drumdino is a drum kit implementation using an Arduino shield interfaced with Ma
 ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/Kit.jpg)
 
 ##Overview
-In essence, an Arduino sketch is used to receive and process any impact received on the six pads. This data is sent to Max/MSP and converted to MIDI notes that can be outputted via the AU DLS Synth or be further processed for many interesting applications! 
+In essence, an Arduino sketch is used to receive and process any impact received on the six pads. This data is sent to Max/MSP and converted to MIDI notes that can be outputted via the AU DLS Synth or be further processed for many interesting applications! Drumduino can be played with just about any object, not necessarily drum sticks. Its tuning implementation makes it possible for the user play the pads with their hands as if they are percussion instruments, with drumsticks and brushes, or many other creative ways. Drumduino has adjustable sensitivity and delay settings that let the kit achieve optimal responsiveness on any surface, with any method of hitting its pads. 
 There were both hardware and software parts to this project, with more emphasis on hardware in relation to producing an optimal sound and the authentic feeling of actually playing the drums. Sensitivity, rebound and types of material to be used in conjunction with Arduino's sensing pins were all factors that needed to be considered before any software implementation, or else the kit (even though not authentic in terms of size & orientation), would not "feel" real when you hit it with a drum stick.
 
 
@@ -22,11 +22,11 @@ The first thing I had in my mind was to create a drum sequencer (of the size of 
 
 
 
-Force-sensing seemed to be a reasonable starting point to focus on. However, being unfamiliar with the myriad parts that can be used with Arduino, I found myself being inclined to use the Piezo Element to achieve the "knock sensing" functionality after my initial research (instead of arcade buttons, for example, to have multiple force sensors in a smaller surface area). Once I got a hold of some Piezo elements, the first thing that came to my mind as someone who plays the drums was to actually build an electronic drum kit out of them. Reasons for this include:
-  - Acoustic drums are very loud! I wanted to be able to create a series of pads that I can adjust the volume with, making it safe to play them at home however I like
+Force-sensing seemed to be a reasonable starting point to focus on. However, being unfamiliar with the myriad parts that can be used with Arduino, I found myself being inclined to use the Piezo Element to achieve the "knock sensing" functionality after my initial research (instead of arcade buttons, for example, in order to have multiple force sensors in a smaller surface area). Once I got a hold of some Piezo elements, the first thing that came to my mind as someone who plays the drums was to actually build an electronic drum kit out of them. Reasons for this include:
+  - Acoustic drums are very loud! I wanted to be able to create a series of pads that I can adjust the volume and other aspects with, making it safe to play them at home however I like
   - As a drummer, I always took the whatever the sound that the drums I hit produced for granted (after proper tuning, of course). Now that I know digital processing of sounds, I wanted to rather tweak these sounds and play around with them, producing many possibilities and expanding my horizons in terms of the sound that a drum kit element can produce (cymbals, drums, or even notes)
   - Building a drum kit was a reasonable implementation choice given that I decided to use force sensing resistors as part of this project to create interesting applications with the Arduino
-  - The code I would have that senses "knocks" via the Arduino and sends proper messages to Max/MSP for sound generation and processing would be applicable to more than just an electronic drum kit project. So once I finished my drum kit and properly integrated its software, I could easily use the same software (with minor adjustments) to implement my initial project idea of building a small drum sequencer attachable to an electric guitar using arcade buttons as kit elements.
+  - The code I would have that would sense "knocks" via the Arduino and send proper messages to Max/MSP for sound generation and processing would be applicable to more than just an electronic drum kit project. So once I finished my drum kit and properly integrated its software, I could easily use the same software (with minor adjustments) to implement my initial project idea of building a small drum sequencer attachable to an electric guitar using arcade buttons as kit elements.
 
 | Piezo Element  | Arcade Button |
 | ------------- | ------------- |
@@ -37,6 +37,7 @@ To implement
 
 
 ##Example Usage
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/First_Upload_Not_Tuned_Yet.m4v)
 
 ##Challenging Issues
 - Putting together the hardware was much more difficult than how I envisioned it. I had previously worked with integrating circuits with Arduino to build a variety of different electronics in my engineering classes. However, back then I was more inclined to work on the software portions of group assignments during the division of tasks with my groupmates. I let others worry about the hardware while I worked on software, which was more engaging from my perspective. This project taught me, for one thing, that one can not simply neglect the importance of hardware and the existance of its issues when bringing together a project like this from scratch. Software is not everything (even though I want it to be).
