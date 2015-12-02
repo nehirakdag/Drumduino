@@ -39,7 +39,7 @@ The core foundation of the Drumduino is the Piezo Element, which is basically a 
 
 Reading analog pin 0 for this circuit in the main loop function will continually yield voltage values. When there is no pressure applied on the piezo element, the voltage reading will result in readings of 0 (assuming there is no noise). Any force applied will yield non-zero readings, depending on the pressure on the piezo. The great thing about these elements is that they are not necessarily used on their own. Attaching them to a metal surface allows one to expand the surface area that is sensitive to impact. This will be the theoretical approach behind the Drumduino's implementation in terms of hardware.
 
-One must first decide on the approximate size of the surface of each pad will be, so that material can be bought accordingly. Although there are many ways to create the drum pads, it makes sense to build each pad in three layers. The top layer will receive the drumstrokes so must constitute of a mousepad-like surface for authenticity. The middle layer is a metal that the piezo element will attach to. We want to protect this surface from direct contact of any impact applied, and hence are wrapping it around in two other layers. The bottom layer is simply there for stability, shock absorbtion and preventing any damage on the important middle layer; and thus can be any foamlike material, or mousepad again.
+One must first decide on the approximate size of the surface of each pad will be, so that material can be bought accordingly. Although there are many ways to create the drum pads, it makes sense to build each pad in three layers. The top layer will receive the drumstrokes so must constitute of a mousepad-like surface for authenticity. The middle layer is a metal that the piezo element will attach to. We want to protect this surface from direct contact of any impact applied, and hence are wrapping it around in two other layers. The bottom layer is simply there for stability, shock absorbtion and preventing any damage on the important middle layer; and thus can be any foamlike material, or mousepad again. The goal of creating an authentic pad could only be accomplished by using such material. 
 
 Materials needed:
 - x6 Piezo elements
@@ -52,10 +52,23 @@ Materials needed:
 - x6 1MegaOhm resistors
 - Craft glue or adhesive spray to connect each layer together
 - Plywood (or basically any large, flat surface that the six pads and Arduino can reside on once everything is finished)
+- Scissors (or knife?) to cut each layer of the pad
+- Other complementary tools for general wiring (wire cutter, stripper, plier etc.)
+- A print-out schematic of a perfect circle about the desired pad size is also recommended for cutting each layer accurately
 
+After acquiring these materials, one can start the implementation by using the schematic to cut six circles of each layer (or however many number of pads desired, six is the number used for this example). Here is what the bottom and top layer would look like:
 
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/Pad_material.jpg)
 
-The goal of creating an authentic pad could only be accomplished by using such material. 
+The middle layer will later be inserted on top of the bottom layer as such. However, we need to attach the piezo element to this surface first.
+
+| What we have  | What we have | What we want |
+| ------------- | ------------- | ------------- |
+| ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/piezo_initial.jpg)  | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/Aluminum_disc.jpg)  |
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/piezo_on_disc.jpg) | 
+
+We will want to make six of these. This is where hot glue comes to play, used to stick the piezo element to the metal disc we have. Make sure to get it as flat as possible for best results. Orient piezo on the disc such that the ends of its wires are not on the disc (unlike the picture shown on the left above). Next, notice that the piezo
+
 
 
 ##Example Usage
