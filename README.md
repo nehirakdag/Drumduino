@@ -76,14 +76,15 @@ We will want to make six of these. This is where hot glue comes to play, used to
 
 Our job is not quite done with the wiring. The soldered extension of the piezo element will not be very strong. Since the Piezo's wires are pretty thin, and we will be dealing with an impact based system, we should aim to strengthen this connection somehow. If not cautious, the joint can easily detach and would have to be soldered again. Using heat shrinking tubes (or electrical tape can also work) makes sure this does not happen. Putting them on the joint and heating the tube via a lighter or a blowdryer will make them shrink until sturdy, but make sure not to damage the wiring. Repeat this for the other five pads. We should have something like so:
 
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/heat_shrink.jpg)
 
-Almost there! Now glue each of the three layers in the order discussed, on top of the base material like so (note that the middle two were not glued yet in the example below):
+Almost there! Now glue each of the three layers in the order discussed, on top of the base material to obtain the kit like so:
 
 ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/draft2.jpg)
 
 All that is left is to complete the circuit. With the circuitry for piezo elements in mind, create six circuits of each piezo element in parallel connection with a 1 MegaOhm resistor, with the positive input going in to analog pins of the Arduino:
 
-![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/final_circuit.jpg)
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/final_circuit2.jpg)
 
 Parallel connect each + and - end of the piezo element to the appropriate ends of each circuit. The hardware is finally done! Now we can implement some software to process these pads.
 
