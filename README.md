@@ -91,14 +91,16 @@ Parallel connecting each + and - end of the piezo element to the appropriate end
 ##Software
 The fundamental idea behind the software is as follows. The Arduino can read the voltage readings on each of its six analog pins continually. Printing these values on the Serial during each iteration of the main loop function lets the user be able to send these values to an audio processing software to produce appropriate sounds for the pads. Each pad will read a value of zero (assuming properly designed hardware) or some value below an adjustable threshold when there is no impact applied on them. When a pad is hit, the voltage value corresponding to it will have a higher value depending on the amount of pressure applied. If these values are continually sent to another program (Max/MSP in this case), one can assign Note On/Note Off pairs for each instance when a pad reading goes from zero to a non-zero value.
 
-//PICTURE of 0 0 0 0 0 0's and a few non zeros
+| Serial when there is no pad hit | Serial when pads are hit on different occasions |
+| ------------- | ------------- |
+| ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/zeros_serial.png)  | ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/nonzeros_serial.png)  |
 
 However, it is most likely that not every pad will yield identical readings for the same amount of pressure applied. Two pads will most likely respond to the same hit with different readings, considering the fact that they were not built in a factory environment. They each will probably have some noise, such that they keep producing some lower yet non-zero value reading for a certain number of iterations after the one at which they receive a drumstroke. If the user hits a pad and then keeps their drumstick/hand/finger etc. on the pad, the pad will notice this and can lead to the production of roll-like sounds even though no impact is being applied currently. Furthermore, if a pad is too sensitive, hitting a pad may result in non-zero readings in another one, producing undesired sounds again. It would be unprefferable to get a snare sound as well when one hits the hi-hat pad. On the other hand, if each pad is adjusted to only recieve non-zero readings during heavy impacts, the kit would lose the ability to play ghost notes, softer hits and so on. The balance should be created such that none of these outcomes occur. Hitting the pads with drumsticks, hands or other objects will all produce different pressure values on them, and thus create a variety of voltage reading combinations from the six pins on the Arduino. Different players will have different stroke strengths, styles and even the surface on which the kit is placed is an important factor that affects these readings.
 
 
 To get around these possible sources of error, the Drumduino implements the tuning functionality. In other words, the software is created such that it has the ability to adapt the pads' sensitivities completely depending on the user's desires. Since each pad should be considered individually, we need arrays of the size of the number of pads to store one particular characteristic for each of them. There will be four arrays, one corresponding to the cutoff voltage reading value per each pad, the other for the number of maximum allowed play times (in iterations of the loop() function) for each pad, another for the current play time for each pad, and one to signal if a pad has become activated (received a hit) recently.
 
-//PICTURE OF ARAYS IN THE CODE*
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/arduino_sketch1.png)
 
 The Serial Bandwidth is set to 115200Hz in this example, and this value is important as Max/MSP must also be set to this bandwidth to properly read the pads' voltages.
 
@@ -114,15 +116,15 @@ Finally, there is a small delay at the end of each iteration to prevent overload
 
 Here is an image of the complete code. It can also be found in the website's directory as an Arduino sketch file.
 
-//PICTURE OF MAIN LOOP IN THE CODE*
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/arduino_sketch2.png)
 
 Next, our readings are ready to be processed with MAX/MSP to produce sounds! Firstly, we must read the Arduino's serial by looking at the proper port and serial bandwidth in a specific sampling rate, parse the six integer readings so that they can correspond to inputs of different pads, and send them to note out objects with six different instances that trigger when their corresponding pad is hit. Here is the main patch that achieves this functionality:
 
-//PICTURE OF MAX MAIN PATCH*
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/maxpatch1.png)
 
 Once the pads are parsed and each reading is sent to separate inlets of the subpatch, we simply determine what type of sound we want for each pad to play when hit. Looking up the corresponding MIDI mappings of each drum kit element will likely be useful at this point. Note that the MIDI channel 10 (or 9 if you start from 0) corresponds to percussions, and should be chosen if a drum kit is the desired type of sound. Next, the patch is set up so that each pad will send a bang message to the designated note values when triggered, which cause a note output by activating the noteout object and produce the sound we want. Here is the patch that deals with this issue:
 
-//PICTUTE OF SUBPATCH
+![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/maxpatch2.png)
 
 ##Example Usage
 (Please view the raw videos provided, GitHub truncates the actual files)
