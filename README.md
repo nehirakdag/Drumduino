@@ -129,9 +129,9 @@ Once the pads are parsed and each reading is sent to separate inlets of the subp
 ##Example Usage
 (Videos are also downloadable in raw format in the website's directory)
 
-- [First Upload Testing] (https://youtu.be/8CVCihqByv0)
-- [A Simple Beat] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/Simple_Beat.mp4)
-- [A Short Jam] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/Short_Jam.m4v) <- a good example demonstrating the drums' sensitivity and potential
+- [First Upload Testing - Before Tuning] (https://youtu.be/8CVCihqByv0)
+- [A Simple Beat] (https://youtu.be/oUrANeUZLs4)
+- [A Short Jam] (https://youtu.be/5HlxGyfsw0Y) <- a good example demonstrating the drums' sensitivity and potential
 
 ##Challenging Issues
 - Putting together the hardware was much more difficult than how I envisioned it. I had previously worked with integrating circuits with Arduino to build a variety of different electronics in my engineering classes. However, back then I was more inclined to work on the software portions of group assignments during the division of tasks with my groupmates. I let others worry about the hardware while I worked on software, which was more engaging from my perspective. This project taught me, for one thing, that one can not simply neglect the importance of hardware and the existance of its issues when bringing together a project like this from scratch. Software is not everything (even though I initially preferred it to be).
