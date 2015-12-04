@@ -127,10 +127,9 @@ Once the pads are parsed and each reading is sent to separate inlets of the subp
 ![Alt text](https://github.com/nehirakdag/Drumduino/blob/master/Images/maxpatch2.png)
 
 ##Example Usage
-(Please view the raw videos provided, GitHub truncates the actual files)
+(Videos are also downloadable in raw format in the website's directory)
 
-
-- [First Upload Testing] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/First_Upload_Not_Tuned_Yet.m4v) (sorry for size)
+- [First Upload Testing] (https://youtu.be/8CVCihqByv0)
 - [A Simple Beat] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/Simple_Beat.mp4)
 - [A Short Jam] (https://github.com/nehirakdag/Drumduino/blob/master/Test%20Videos/Short_Jam.m4v) <- a good example demonstrating the drums' sensitivity and potential
 
